@@ -80,8 +80,8 @@
 
                     <!-- -->
                     <div class="container mi-slider">
-                            <ul ng-repeat="total in totalesList">
-                                <li class='cuadroCarrousel' onclick='alert(this);'>
+                            <ul>
+                                <li class='cuadroCarrousel' onclick='alert(this);' ng-repeat="total in totalesList">
                                     <span class='numCarrousel'>{{total.Cantidad}}</span>
                                     <span class='lblCarrousel'>{{total.Nombre}}</span>
                                 </li>
