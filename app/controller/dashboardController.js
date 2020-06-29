@@ -183,7 +183,7 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
     function totalXClasificadores() {
         $scope.totalesList = datosSlider;
 
-        var anchoContent2 = $("section.section").width() - 80;
+        /* var anchoContent2 = $("section.section").width() - 80;
           anchoContent2 = anchoContent2 / 4;
 
           $('.bxslider').bxSlider({
@@ -195,7 +195,7 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
               controls: false,
               pager: true
           });
-          $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
+          $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");*/
         //cargarClasificadores();
 
         //var url = 'api/dashboard/TotalCantidadXClasificador?macroIds=' + idsMacro + '&regionIds=' + idsRegion + '&fechaInicial=' + fechaIni + '&fechaFinal=' + fechaFin;
