@@ -190,7 +190,8 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
         //    $scope.totalesList = datos;
         //    cargarClasificadores();
         //});
-
+        console.log("prueba")
+        $('.mi-slider').unslider();
     }
 
     ///--------------------------------------------
