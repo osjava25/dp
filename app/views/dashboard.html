@@ -1,0 +1,124 @@
+﻿<div>
+    <!--ng-controller="dashboardController"-->
+    <div class="columns header">
+        <div class="column is-one-fifth"></div>
+    </div>
+    <div class="">
+        <div class="columns is-gapless">
+            <div class="column is-one-fifth menuIzq">
+                <section class="">
+                    <div class="tituloIzq">
+                        <p>Macroregiones</p>
+                    </div>
+                    <section class="accordions" id="ListMacroRegiones">
+                        <div ng-repeat="macro in macrosList">
+                            <article class='accordion'>
+                                <div class='accordion-header'>
+                                    <button class='toggle' aria-label='toggle' ng-click="obtenerRegiones(this)"></button>
+                                    <input type="checkbox" ng-change="selected(macro)" ng-model="macro.select"> {{macro.name}}<br />
+                                </div>
+                                <div class='accordion-body'>
+                                    <div class='accordion-content'>
+                                        <div ng-repeat="region in regionList">
+                                            <input type="checkbox" ng-change="selected(region)" ng-model="region.select"> {{region.name}}<br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <div class="tituloIzq">
+                        <p>Rango de fechas</p>
+                    </div>
+                    <div class="contentMenu">
+                        <input id="datepickerDemoRange" class="input" data-is-range="true" type="date" />
+                    </div>
+                </section>
+                <br />
+                <div class="field is-grouped is-grouped-centered">
+                    <p class="control">
+                        <a id="idFiltrar" class="button is-primary" ng-click="filtrar()">
+                            Filtrar
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a class="button is-light" ng-click="limpiar()">
+                            Limpiar
+                        </a>
+                    </p>
+                </div>
+                <br />
+            </div>
+            <div class="column">
+                <section class="section">
+                    <div class="contentRegistros">
+                        <div class="bxsliderReg" id="contentTabRegistro"></div>
+                    </div>
+                    <div class="columns contentTableroMain">
+                        <div class="column is-half cuadroMain">
+                            <h2>Actores armados</h2>
+                            <div onclick='return false;' class="prog">
+                                <div class="progressWrapper" ng-hide="progressActor">
+                                    <img src="images/load.gif" class="cargando" />
+                                    <div class="progressFondo"></div>
+                                </div>
+                            </div>
+                            <div id="actoresChart" style="width: 100%; height: 380px;"></div>
+                        </div>
+                        <div class="column is-half cuadroMain">
+                            <h2>Pertenencia étnica</h2>
+                            <div onclick='return false;' class="prog">
+                                <div class="progressWrapper" ng-hide="progressPertenencia">
+                                    <img src="images/load.gif" class="cargando" />
+                                    <div class="progressFondo"></div>
+                                </div>
+                            </div>
+                            <div id="etnicaChart" style="width: 96%; height: 380px;"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- -->
+                    <div class="container">
+                        <div id="carrouselContent">
+                            <div class="bxslider" ng-repeat="total in totalesList">
+                                <div class='cuadroCarrousel' onclick='alert(this);'>
+                                    <span class='numCarrousel'>{{total.Cantidad}}</span>
+                                    <span class='lblCarrousel'>{{total.Nombre}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="columns contentTabla">
+                        <div class="column is-full">
+                            <div onclick='return false;' class="prog">
+                                <div class="progressWrapper" ng-hide="progressClasificador">
+                                    <img src="images/load.gif" class="cargando" />
+                                    <div class="progressFondoAmplio"></div>
+                                </div>
+                            </div>
+                            <table id="tableRegistro" class="table is-bordered" width="100%"></table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="columns header" style="margin-top: 10px;">
+        <div class="column is-one-fifth"></div>
+    </div>
+</div>
+<script>
+    function cargarDatos(objeto) {
+        $("#carrouselContent .cuadroCarrousel").removeClass("activo");
+        $(objeto).toggleClass("activo");
+        var dom = jQuery('div[ng-controller="dashboardController"]')[0];
+        var $scope = angular.element(dom).scope();
+        $scope.ejecutarConsulta(objeto.innerText.split(' ')[1]);
+    };
+</script>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/dashboard.js"></script>

@@ -1,0 +1,20 @@
+﻿<script src="../../scripts/jquery-3.5.0.min.js"></script>
+<script src="../../scripts/DataTables/media/js/jquery.dataTables.js"></script>
+<link href="../../content/DataTables/media/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="../../content/DataTables/media/css/jquery.dataTables.css" rel="stylesheet" />
+
+<style>
+    div.dataTables_wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+</style>
+
+<div>
+    <input type="button" title="Obtener Registros Información Survey" value="Obtener Registros" ng-click="retornarPrueba()" />
+    <input type="button" title="Migrar Registros al SISAT" value="Migrar Registros al SISAT" ng-click="alert('Inicia Proceso...')" />
+    <br />
+    <br />
+</div>
+<table id="tblDatos" class="display" style="width:100%; font-size:10px;font-family:Arial; ">
+</table>
