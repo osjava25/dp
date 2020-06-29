@@ -1,4 +1,4 @@
-﻿<div>
+<div>
     <!--ng-controller="dashboardController"-->
     <div class="columns header">
         <div class="column is-one-fifth"></div>
@@ -79,13 +79,15 @@
 
 
                     <!-- -->
-                    <div class="container mi-slider">
-                            <ul>
-                                <li class='cuadroCarrousel' onclick='alert(this);' ng-repeat="total in totalesList">
+                    <div class="container">
+                        <div id="carrouselContent">
+                            <div class="bxslider" ng-repeat="total in totalesList">
+                                <div class='cuadroCarrousel' onclick='alert(this);'>
                                     <span class='numCarrousel'>{{total.Cantidad}}</span>
                                     <span class='lblCarrousel'>{{total.Nombre}}</span>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -117,5 +119,6 @@
         $scope.ejecutarConsulta(objeto.innerText.split(' ')[1]);
     };
 </script>
+
 <script src="scripts/main.js"></script>
 <script src="scripts/dashboard.js"></script>
