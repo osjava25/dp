@@ -36,7 +36,7 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
 
     //getMacroregion();
 	totalXClasificadores();
-	
+
     function getMacroregion() {
         var url = 'api/general/ListaMacroregion';
         var servCall = sisatService.getSubscriber(url);
@@ -182,7 +182,7 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
     ///--------------------------------------------
     function totalXClasificadores() {
         $scope.totalesList = datosSlider;
-        cargarClasificadores();
+        //cargarClasificadores();
 
         //var url = 'api/dashboard/TotalCantidadXClasificador?macroIds=' + idsMacro + '&regionIds=' + idsRegion + '&fechaInicial=' + fechaIni + '&fechaFinal=' + fechaFin;
         //var servCall = sisatService.getSubscriber(url);
