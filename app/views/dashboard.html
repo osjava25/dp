@@ -81,8 +81,8 @@
                     <!-- -->
                     <div class="container">
                         <div id="carrouselContent">
-                            <div class="bxslider" ng-repeat="total in totalesList">
-                                <div class='cuadroCarrousel' onclick='alert(this);'>
+                            <div class="bxslider">
+                                <div class='cuadroCarrousel' onclick='alert(this);' ng-repeat="total in totalesList">
                                     <span class='numCarrousel'>{{total.Cantidad}}</span>
                                     <span class='lblCarrousel'>{{total.Nombre}}</span>
                                 </div>
