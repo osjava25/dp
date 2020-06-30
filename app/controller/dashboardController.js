@@ -195,7 +195,7 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
               controls: false,
               pager: true
           });
-          $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
+          $("#carrouselContent .bxslider .cuadroCarrousel:eq(4)").addClass("activo");
 
         });
 
