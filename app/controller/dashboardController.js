@@ -183,9 +183,7 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
     function totalXClasificadores() {
         $scope.totalesList = datosSlider;
 
-        var anchoContent2 = $("section.section").width() - 80;
-          anchoContent2 = anchoContent2 / 4;
-        $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
+
           /* $('.bxslider').bxSlider({
               mode: 'horizontal',
               minSlides: 1,
@@ -207,6 +205,12 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
 
     }
 
+  function pruebaSlider(){
+    var anchoContent2 = $("section.section").width() - 80;
+      anchoContent2 = anchoContent2 / 4;
+    $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
+    
+  }
     ///--------------------------------------------
     /// Ejecución de los diferentes clasificadores
     ///--------------------------------------------
