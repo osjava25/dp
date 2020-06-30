@@ -32,7 +32,8 @@ app.constant('ngSisatSettings', {
     clientId: 'ngSisatApp'
 });
 
-app.directive('onFinishRender', function ($timeout) {
+var module = angular.module('testApp', [])
+  .directive('onFinishRender', function ($timeout) {
     return {
      restrict: 'A',
      link: function (scope, element, attr) {
