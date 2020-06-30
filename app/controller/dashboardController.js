@@ -205,12 +205,12 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
 
     }
 
-  function pruebaSlider(){
-    var anchoContent2 = $("section.section").width() - 80;
+    function pruebaSlider() {
+      console.log("prueba");
+      var anchoContent2 = $("section.section").width() - 80;
       anchoContent2 = anchoContent2 / 4;
-    $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
-    
-  }
+      $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
+    }
     ///--------------------------------------------
     /// Ejecución de los diferentes clasificadores
     ///--------------------------------------------
