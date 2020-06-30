@@ -192,8 +192,9 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
               maxSlides: 4,
               slideWidth: anchoContent2,
               slideMargin: 20,
-              controls: true,
-              pager: false
+              controls: false,
+              touchEnabled: false,
+              pager: true
           });
           $("#carrouselContent .bxslider .cuadroCarrousel:eq(4)").addClass("activo");
 
