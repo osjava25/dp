@@ -183,17 +183,24 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
     function totalXClasificadores() {
         $scope.totalesList = datosSlider;
 
-
         $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 
-          console.log("prueba");
           var anchoContent2 = $("section.section").width() - 80;
           anchoContent2 = anchoContent2 / 4;
+          $('.bxslider').bxSlider({
+              mode: 'horizontal',
+              minSlides: 1,
+              maxSlides: 4,
+              slideWidth: anchoContent2,
+              slideMargin: 20,
+              controls: false,
+              pager: true
+          });
           $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
 
         });
 
-        
+
           /* $('.bxslider').bxSlider({
               mode: 'horizontal',
               minSlides: 1,
