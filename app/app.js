@@ -32,7 +32,7 @@ app.constant('ngSisatSettings', {
     clientId: 'ngSisatApp'
 });
 
-var module = angular.module('testApp', [])
+var module = angular.module('sisatApp', [])
   .directive('onFinishRender', function ($timeout) {
     return {
      restrict: 'A',
@@ -42,6 +42,6 @@ var module = angular.module('testApp', [])
              scope.$emit(attr.onFinishRender);
             });
          }
-      } 
+      }
     }
 });
