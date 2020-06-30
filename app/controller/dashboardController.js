@@ -205,7 +205,7 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
 
     }
 
-    function pruebaSlider() {
+    $scope.pruebaSlider = function() {
       console.log("prueba");
       var anchoContent2 = $("section.section").width() - 80;
       anchoContent2 = anchoContent2 / 4;
