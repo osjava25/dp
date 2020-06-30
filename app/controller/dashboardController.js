@@ -184,7 +184,6 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
         $scope.totalesList = datosSlider;
 
         $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-
           var anchoContent2 = $("section.section").width() - 80;
           anchoContent2 = anchoContent2 / 4;
           $('.bxslider').bxSlider({

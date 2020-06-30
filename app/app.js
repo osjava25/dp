@@ -1,6 +1,18 @@
 ﻿'use strict';
 
 var app = angular.module('sisatApp', ['ngRoute']);
+.directive('onFinishRender', function ($timeout) {
+  return {
+   restrict: 'A',
+   link: function (scope, element, attr) {
+       if (scope.$last === true) {
+           $timeout(function () {
+           scope.$emit(attr.onFinishRender);
+          });
+       }
+    }
+  }
+});
 
 app.config(function ($routeProvider) {
 
@@ -30,18 +42,4 @@ var serviceBase = 'http://localhost:63673/';
 app.constant('ngSisatSettings', {
     apiServiceBaseUri: serviceBase,
     clientId: 'ngSisatApp'
-});
-
-var module = angular.module('sisatApp', [])
-  .directive('onFinishRender', function ($timeout) {
-    return {
-     restrict: 'A',
-     link: function (scope, element, attr) {
-         if (scope.$last === true) {
-             $timeout(function () {
-             scope.$emit(attr.onFinishRender);
-            });
-         }
-      }
-    }
 });
