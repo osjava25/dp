@@ -204,13 +204,16 @@ app.controller('dashboardController', ['$scope', 'sisatService', '$location', 'u
         //});
 
     }
+    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 
-    $scope.pruebaSlider = function() {
       console.log("prueba");
       var anchoContent2 = $("section.section").width() - 80;
       anchoContent2 = anchoContent2 / 4;
       $("#carrouselContent .bxslider .cuadroCarrousel:eq(0)").addClass("activo");
-    }
+
+    });
+
+
     ///--------------------------------------------
     /// Ejecución de los diferentes clasificadores
     ///--------------------------------------------
